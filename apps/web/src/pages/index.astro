@@ -1,17 +1,34 @@
 ---
-
+import '../styles/global.css';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    />
+    <title>Lightcraft</title>
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col items-center justify-center p-6">
+    <main class="max-w-xl text-center space-y-4">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white">Lightcraft</h1>
+      <p class="text-neutral-400 text-lg">
+        Foundations of light transport, path guiding, and classical raster architectures.
+      </p>
+      <div class="pt-4 flex justify-center gap-4">
+        <span class="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded-full text-xs font-mono text-neutral-300">
+          Tailwind v4 Active
+        </span>
+        <span class="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded-full text-xs font-mono text-neutral-300">
+          KaTeX Ready
+        </span>
+      </div>
+    </main>
+  </body>
 </html>
